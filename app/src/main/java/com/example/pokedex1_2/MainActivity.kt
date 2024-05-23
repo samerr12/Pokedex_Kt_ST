@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         //elementos (tem de tar aqui pq senão n funcionam)
         val texto = findViewById<TextView>(R.id.texto_teste)
-        //val Btn_MudarTexto = findViewById<Button>(R.id.btnMudarTexto)
+        val apresentar_pokemon = findViewById<TextView>(R.id.present_pokemon)
 
 
         //---------------------------------------------------------------------------------
@@ -50,6 +50,42 @@ class MainActivity : AppCompatActivity() {
 
         }
         catch (e: Exception) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
+        }
+
+        //apresentar os pokemons
+
+        try {
+            var texto_place_holder: String = ""
+
+            // apresentar o nome da região
+            texto_place_holder += "região: " + adicionar_pokemons().nome
+
+            for (rota in adicionar_pokemons().rotas) {
+
+                texto_place_holder += "\nrota: " + rota.nome
+
+                apresentar_pokemon.text = texto_place_holder
+
+                for (tile in rota.tiles) {
+
+                    texto_place_holder += "\ncom: " + tile.nome
+
+                    apresentar_pokemon.text = texto_place_holder
+
+                    for (pokemons_possiveis in tile.pokemon_possiveis) {
+
+                        texto_place_holder += "\nnome: " + pokemons_possiveis.nome.nome
+
+                        apresentar_pokemon.text = texto_place_holder
+
+                        texto_place_holder += "\nchance: " + pokemons_possiveis.chance
+                        apresentar_pokemon.text = texto_place_holder
+                    }
+                }
+            }
+        }
+        catch (e:Exception) {
             Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
         }
     }

@@ -53,15 +53,29 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
         }
 
+
+        var texto_place_holder: String = ""
+
         //apresentar os pokemons
 
         try {
-            var texto_place_holder: String = ""
+            for (pokemon in adicionar_pokemons()) {
+                texto_place_holder += "${pokemon.nome}\n"
+            }
+
+            apresentar_pokemon.text = texto_place_holder
+        }
+        catch (e:Exception) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
+        }
+
+        /*
+        try {
 
             // apresentar o nome da região
-            texto_place_holder += "região: " + adicionar_pokemons().nome
+            texto_place_holder += "região: " + adicionar_terreno().nome
 
-            for (rota in adicionar_pokemons().rotas) {
+            for (rota in adicionar_terreno().rotas) {
 
                 texto_place_holder += "\nrota: " + rota.nome
 
@@ -88,5 +102,6 @@ class MainActivity : AppCompatActivity() {
         catch (e:Exception) {
             Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
         }
+         */
     }
 }

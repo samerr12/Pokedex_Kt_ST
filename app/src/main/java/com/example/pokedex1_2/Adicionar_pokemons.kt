@@ -1,6 +1,6 @@
 package com.example.pokedex1_2
 
-fun adicionar_pokemons(): Terreno_regiao {
+fun adicionar_pokemons(): Array<Pokemon> {
 
     var conjunto_pokemons: Array<Pokemon> = arrayOf()
 
@@ -32,7 +32,12 @@ fun adicionar_pokemons(): Terreno_regiao {
     conjunto_pokemons = arrayOf(Bulbassaur, Ivysaur, Venusaur, Charmander, Charmeleon, Charizard, Squirtle, Wartortle, Blastoise,
         Caterpie, Metapod, Butterfree, Weedle, Kakuna, Beedrill, Pidgey, Pidgeotto, Pidgeot)
 
-    /* ------------------------------ SEPARAÇÃO DE CODIGO ------------------------------ */
+    return conjunto_pokemons
+}
+
+fun adicionar_terreno(): Terreno_regiao {
+
+    var conjunto_pokemons:Array<Pokemon> = adicionar_pokemons()
 
     var terreno: Terreno_regiao
     var rotas: Rota

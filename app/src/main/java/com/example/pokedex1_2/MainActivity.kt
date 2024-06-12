@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
 
         //parte dos tipos
 
+        /*
+
         var conjunto_tipos_nomes: Array<String> = arrayOf("Normal", "Fire", "Water", "Grass", "Electric", "Ice", "Fighting", "Poison", "Ground", "Flying", "Psychic", "Bug", "Rock", "Ghost", "Dragon", "Dark", "Steel", "Fairy")
 
         try {
@@ -53,6 +55,8 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
         }
 
+         */
+
 
         var texto_place_holder: String = ""
 
@@ -60,7 +64,7 @@ class MainActivity : AppCompatActivity() {
 
         try {
             for (pokemon in adicionar_pokemons()) {
-                texto_place_holder += "${pokemon.nome}\n"
+                texto_place_holder += "${pokemon.nome} - ${pokemon.status.Hp}\n"
             }
 
             apresentar_pokemon.text = texto_place_holder

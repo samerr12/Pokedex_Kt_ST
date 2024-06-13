@@ -1,15 +1,15 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
 }
 
 android {
-    namespace = "com.example.pokedex1_2"
+    namespace = "com.example.pokedex"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.pokedex1_2"
-        minSdk = 27
+        applicationId = "com.example.pokedex"
+        minSdk = 24
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -45,4 +45,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
 }

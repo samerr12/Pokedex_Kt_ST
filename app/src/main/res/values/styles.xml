@@ -1,0 +1,13 @@
+<resources>
+    <!-- Tema do aplicativo -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Definições do tema do aplicativo -->
+    </style>
+
+    <!-- Tema detalhado para a PokemonDetailActivity -->
+    <style name="AppTheme.Detail" parent="AppTheme">
+        <!-- Adicione quaisquer modificações ou definições específicas do tema da atividade aqui -->
+    </style>
+
+
+</resources>

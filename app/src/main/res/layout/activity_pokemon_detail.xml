@@ -1,0 +1,260 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/pokemonDetailLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Botão De Voltar -->
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:text="Voltar"
+                android:textColor="@android:color/white"/>
+
+            <!-- Plano de fundo branco com cantos arredondados -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/retangulo_branco"
+                android:orientation="vertical"
+                android:layout_marginTop="70dp">
+
+                <!-- Imagem Do Pokémon -->
+                <ImageView
+                    android:id="@+id/pokemonDetailImageView"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:src="@drawable/bulbasaur"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp" />
+
+                <!-- Nome Do Pokémon -->
+                <TextView
+                    android:id="@+id/pokemonDetailNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bulbasaur"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_horizontal" />
+
+                <!-- ID Do Pokémon -->
+                <TextView
+                    android:id="@+id/pokemonDetailNumberTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#001"
+                    android:textSize="20sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <!-- Tipo Do Pokémon -->
+                <LinearLayout
+                    android:id="@+id/pokemonDetailTypeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center_horizontal" >
+                </LinearLayout>
+
+                <!-- Tabela de Stats -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="16dp"
+                    android:padding="8dp">
+
+                    <!-- Linha de HP -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Texto HP -->
+                        <TextView
+                            android:id="@+id/hpValueTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HP: 50"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <!-- ProgressBar de HP -->
+                        <ProgressBar
+                            android:id="@+id/hpProgressBar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="255"
+                            android:progress="50"
+                            android:progressTint="@color/red"/>
+                    </LinearLayout>
+
+                    <!-- Linha de Attack -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Texto Attack -->
+                        <TextView
+                            android:id="@+id/attackValueTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Attack: 50"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <!-- ProgressBar de Attack -->
+                        <ProgressBar
+                            android:id="@+id/attackProgressBar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="255"
+                            android:progress="50"
+                            android:progressTint="@color/blue"/>
+                    </LinearLayout>
+
+                    <!-- Linha de Defense -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Texto Defense -->
+                        <TextView
+                            android:id="@+id/defenseValueTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Defense: 50"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <!-- ProgressBar de Defense -->
+                        <ProgressBar
+                            android:id="@+id/defenseProgressBar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="255"
+                            android:progress="50"
+                            android:progressTint="@color/pink"/>
+                    </LinearLayout>
+
+                    <!-- Linha de Special Attack -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Texto Special Attack -->
+                        <TextView
+                            android:id="@+id/specialAttackValueTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Special Attack: 50"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <!-- ProgressBar de Special Attack -->
+                        <ProgressBar
+                            android:id="@+id/specialAttackProgressBar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="255"
+                            android:progress="50"
+                            android:progressTint="@color/yellow"/>
+                    </LinearLayout>
+
+                    <!-- Linha de Special Defense -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Texto Special Defense -->
+                        <TextView
+                            android:id="@+id/specialDefenseValueTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Special Defense: 50"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <!-- ProgressBar de Special Defense -->
+                        <ProgressBar
+                            android:id="@+id/specialDefenseProgressBar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="255"
+                            android:progress="50"
+                            android:progressTint="@color/green"/>
+                    </LinearLayout>
+
+                    <!-- Linha de Speed -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <!-- Texto Speed -->
+                        <TextView
+                            android:id="@+id/speedValueTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Speed: 50"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:layout_marginEnd="8dp"/>
+
+                        <!-- ProgressBar de Speed -->
+                        <ProgressBar
+                            android:id="@+id/speedProgressBar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="255"
+                            android:progress="50"
+                            android:progressTint="@color/purple"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

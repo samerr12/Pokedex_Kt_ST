@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Retângulo para o conteúdo do Pokémon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/retangulo_fundo"
+        android:layout_margin="8dp">
+
+        <!-- Retângulo da foto do Pokémon -->
+        <ImageView
+            android:id="@+id/pokemonImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/bulbasaur"/>
+
+        <!-- Layout para os detalhes do Pokémon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="8dp">
+
+            <!-- Nome do Pokémon -->
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/pokemonNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bulbasaur"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <!-- Número do Pokémon -->
+            <TextView
+                android:id="@+id/pokemonNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#001"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="25dp"/>
+
+            <!-- Layout para os tipos do Pokémon -->
+            <LinearLayout
+                android:id="@+id/pokemonTypesLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

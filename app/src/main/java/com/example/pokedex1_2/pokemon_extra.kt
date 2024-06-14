@@ -4,7 +4,7 @@ class Habilidade (var nome:String, var descricao: String) {
 
 }
 
-class Status (var Hp:Int, Atk: Int, Def:Int, SpAtk:Int, SpDef:Int, Spd:Int) {
+class Status (var Hp:Int, var Atk: Int, var Def:Int, var SpAtk:Int, var SpDef:Int, var Spd:Int) {
 
 }
 

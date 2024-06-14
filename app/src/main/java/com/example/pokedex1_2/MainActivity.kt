@@ -64,7 +64,8 @@ class MainActivity : AppCompatActivity() {
 
         try {
             for (pokemon in adicionar_pokemons()) {
-                texto_place_holder += "${pokemon.nome} - ${pokemon.status.Hp}\n"
+                texto_place_holder += "${pokemon.nome} - ${pokemon.status.Hp}, ${pokemon.status.Atk}, " +
+                        "${pokemon.status.Def}, ${pokemon.status.SpDef}, ${pokemon.status.SpAtk}, ${pokemon.status.Spd}\n"
             }
 
             apresentar_pokemon.text = texto_place_holder
